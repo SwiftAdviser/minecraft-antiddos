@@ -93,19 +93,8 @@ iptables -A INPUT -i eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
 ## WHITELIST наших нод
 ##
 
-# SYS1
-iptables -A INPUT -s sys1.mineland.net -i eth0 -p tcp -j ACCEPT
-# SYS2
-iptables -A INPUT -s sys2.mineland.net -i eth0 -p tcp -j ACCEPT
-# ALICE-VM
-iptables -A INPUT -s alice-vm.mineland.net -i eth0 -p tcp -j ACCEPT
-# MEGA1
-iptables -A INPUT -s 193.70.80.174 -i eth0 -p tcp -j ACCEPT
-iptables -A INPUT -s mega1.mineland.net -i eth0 -p tcp -j ACCEPT
-# MEGA2
-iptables -A INPUT -s mega2.mineland.net -i eth0 -p tcp -j ACCEPT
-# DEV
-iptables -A INPUT -s dev.mineland.net -i eth0 -p tcp -j ACCEPT
+# ТУТ ЗАМЕНИ НА СВОИ АДРЕС(А):
+iptables -A INPUT -s АДРЕС -i eth0 -p tcp -j ACCEPT
 
 
 
